@@ -8,7 +8,8 @@
     </p>
   </div>
 </template>
-<style lang="sass" scoped>
+
+<style lang="sass">
 h1
   color: black
   font-size: em(30)
