@@ -5,11 +5,7 @@
         <a class="header-logo__siteName" href="/">Рейтинг ППС</a>
       </div>
       <Nav></Nav>
-      <div class="header-user">
-        <a href="" class="button button_radius_40 button_withborder_blue">
-          Вход
-        </a>
-      </div>
+      <UserActions></UserActions>
     </header>
     <router-view />
   </div>
@@ -17,21 +13,21 @@
 
 <script>
 import Nav from "@/components/menu/Nav.vue";
+import UserActions from "@/components/menu/UserActions.vue";
 
 export default {
   name: "App",
   components: {
-    Nav
+    Nav,
+    UserActions
   },
   data() {
     return {
       hover: false
     };
-  },
-
+  }
 };
 </script>
-
 
 <style lang="sass">
 .header
@@ -45,7 +41,7 @@ export default {
     padding: 0 10px
     &__siteName
       white-space: nowrap
-      font-weight: 600
+      font-weight: bold
       font-size: em(25)
   &-user
     padding: 0 em(10)
