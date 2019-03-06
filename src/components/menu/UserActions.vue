@@ -37,7 +37,7 @@
 </template>
 <script>
 export default {
-  name: "Navigation",
+  name: "UserActions",
   data: function() {
     return {
       auth: true,
