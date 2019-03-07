@@ -31,7 +31,16 @@ export default {
   },
   methods: {
     openDynamic() {
-      this.$modal.show(MyComponent, { postId: this.thisPostId });
+      this.$modal.show(
+        MyComponent,
+        { postId: this.thisPostId },
+        {
+          width: "80%",
+          height: "auto",
+          clickToClose: false,
+          scrollable: true
+        }
+      );
     },
     hide() {
       this.$modal.hide("hello-world");

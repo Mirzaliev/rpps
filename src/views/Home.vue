@@ -10,14 +10,12 @@
 <script>
 import Spinner from "vue-simple-spinner";
 import PostItem from "@/components/posts/PostItem.vue";
-import ViewCommentsModal from "@/components/posts/ViewCommentsModal";
 
 export default {
   name: "home",
   components: {
     Spinner,
-    PostItem,
-    ViewCommentsModal
+    PostItem
   },
   data: function() {
     return {
