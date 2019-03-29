@@ -53,15 +53,20 @@ export default {
     close: () => {
       console.log("close");
     }
-
   }
 };
 </script>
 
 <style lang="sass" scoped>
+.example-modal-content
+  padding: 10px 20px
 .example-modal-content-link
+  display: block
   width: 100%
   padding: 20px
   text-align: center
   color: white
+  background-color: #00bff3
+  margin-top: 10px
+  cursor: pointer
 </style>

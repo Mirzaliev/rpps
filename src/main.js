@@ -6,6 +6,7 @@ import store from "./store";
 import EvaIcons from "vue-eva-icons";
 import VueModal from "vue-js-modal";
 
+
 Vue.use(EvaIcons);
 Vue.use(VueModal, {
   // componentName: "vue-modal",

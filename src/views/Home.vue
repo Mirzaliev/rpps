@@ -4,6 +4,7 @@
     <div v-if="!loading" class="posts">
       <post-item v-for="post in posts" :key="post.id" :post="post"></post-item>
     </div>
+    <div class></div>
   </div>
 </template>
 
@@ -39,7 +40,7 @@ export default {
 </script>
 
 <style lang="sass">
-.posts
+.home
   background-color: #e7e7e7
   padding: em(30) em(40)
 </style>

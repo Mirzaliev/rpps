@@ -1,0 +1,14 @@
+$default-font: "segoe-ui", sans-serif
+$accent: orange
+$text: #333
+
+$blue: #0081FF
+
+$red: #F43F3B
+
+$browser-context: 16
+
+$linkHover: $blue
+
+@function em($pixels, $context: $browser-context)
+  @return #{$pixels/$context}em
