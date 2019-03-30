@@ -1,12 +1,27 @@
 <template>
   <div class="example-modal-content">
     <spinner v-if="loading" message="Подождите..." />
-    <span v-if="!loading">{{ comments }}</span>
+
+    <div class="ui fluid action input">
+      <input type="text" placeholder="Search...">
+      <div class="ui button">Search</div>
+    </div>
+
+    <div class="ui fluid action input">
+      <input type="text" placeholder="Search...">
+      <div @click="openFileManager()" class="ui button">Search</div>
+    </div>
+
+    <div class="ui fluid action input">
+      <input type="text" placeholder="Search...">
+      <div class="ui button">Search</div>
+    </div>
+
 
     <a role="button" @click="success" class="example-modal-content-link green"
       >Все хорошо</a
     >
-    <a role="button" @click="close" class="example-modal-content-link grey"
+    <a role="button" @click="$emit('close')" class="example-modal-content-link grey"
       >Закрыть</a
     >
   </div>
@@ -14,6 +29,7 @@
 
 <script>
 import Spinner from "vue-simple-spinner";
+import FileManager from "@/components/posts/FileManager.vue";
 
 export default {
   name: "ViewCommentsModal",
@@ -51,7 +67,20 @@ export default {
       console.log("success");
     },
     close: () => {
+      this.$emit('close');
       console.log("close");
+    },
+    openFileManager: function () {
+      this.$modal.show(
+          FileManager,
+          {postId: this.thisPostId},
+          {
+            width: "80%",
+            height: "100%",
+            clickToClose: false,
+            scrollable: true
+          }
+      );
     }
   }
 };

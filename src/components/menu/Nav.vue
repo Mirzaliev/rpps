@@ -14,12 +14,6 @@
       >
         <a class="header-nav-item__link dropdown_link">
           <span class="title">Классификаторы</span>
-          <eva-icon
-            name="arrow-down"
-            width="18"
-            height="18"
-            fill="#ccc"
-          ></eva-icon>
         </a>
         <ul class="dropdown-list">
           <li class="dropdown-list-item">
@@ -42,12 +36,6 @@
       >
         <a class="header-nav-item__link dropdown_link">
           <span class="title">Кафедры</span>
-          <eva-icon
-            name="arrow-down"
-            width="18"
-            height="18"
-            fill="#ccc"
-          ></eva-icon>
         </a>
         <ul class="dropdown-list">
           <li class="dropdown-list-item">

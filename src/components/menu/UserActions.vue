@@ -16,7 +16,6 @@
       @mouseleave="isDropdownActive = false"
     >
       <span class="name">Валерия</span>
-      <eva-icon name="chevron-down" fill="white"></eva-icon>
       <div
         class="avatar"
         style="background-image: url(https://consequenceofsound.files.wordpress.com/2018/10/screen-shot-2018-10-30-at-11-56-46-am.png)"

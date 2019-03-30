@@ -8,7 +8,7 @@
       <eva-icon name="eye"></eva-icon>
     </a>
     <a href="#" class="post-content-link" @click="openDynamic">
-      <eva-icon name="alert-triangle"></eva-icon>
+      <i class="users icon"></i>
     </a>
   </div>
 </template>
