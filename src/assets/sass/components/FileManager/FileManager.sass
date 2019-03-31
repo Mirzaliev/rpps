@@ -1,0 +1,36 @@
+.file-manager
+  width: 100%
+  height: 100%
+.ff
+  &-toolbar
+    padding: 20px 40px
+    background-color: #E9E9E9
+  &-whiteboard
+    height: 100%
+    display: flex
+    &-display
+      min-width: 200px
+      border-right: 1px solid rgba(34,36,38,.15)
+    &-library
+      width: 100%  
+
+.ff-whiteboard .ff-whiteboard-display.display
+  .display__title
+    font-size: em(22)  
+  .display-filters
+    margin: 0
+    padding: 0
+    list-style-type: none
+    &__item
+      padding-left: 20px
+      padding-top: 5px
+      padding-bottom: 5px
+      &.active, &:hover
+          background-color: $ff-link-bg-hover
+          .display-filters__link
+            color: $ff-link-text-hover
+            
+    &__link
+      color: $ff-link-text-color
+      cursor: pointer
+      text-decoration: none

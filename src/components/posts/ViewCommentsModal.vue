@@ -2,26 +2,24 @@
   <div class="example-modal-content">
     <spinner v-if="loading" message="Подождите..." />
 
-    <div class="ui fluid action input">
-      <input type="text" placeholder="Search...">
-      <div class="ui button">Search</div>
+    <div
+      class="ui fluid action input mb-10"
+      v-for="(item, key) in (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)"
+      :key="key"
+    >
+      <input type="text" :id="`input-file-${key}`" placeholder="Search..." />
+      <div @click="openFileManager('input-file-'+key)" class="ui button">
+        Загрузить {{ key }}
+      </div>
     </div>
-
-    <div class="ui fluid action input">
-      <input type="text" placeholder="Search...">
-      <div @click="openFileManager()" class="ui button">Search</div>
-    </div>
-
-    <div class="ui fluid action input">
-      <input type="text" placeholder="Search...">
-      <div class="ui button">Search</div>
-    </div>
-
 
     <a role="button" @click="success" class="example-modal-content-link green"
       >Все хорошо</a
     >
-    <a role="button" @click="$emit('close')" class="example-modal-content-link grey"
+    <a
+      role="button"
+      @click="$emit('close')"
+      class="example-modal-content-link grey"
       >Закрыть</a
     >
   </div>
@@ -67,19 +65,19 @@ export default {
       console.log("success");
     },
     close: () => {
-      this.$emit('close');
+      this.$emit("close");
       console.log("close");
     },
-    openFileManager: function () {
+    openFileManager: function(hash) {
       this.$modal.show(
-          FileManager,
-          {postId: this.thisPostId},
-          {
-            width: "80%",
-            height: "100%",
-            clickToClose: false,
-            scrollable: true
-          }
+        FileManager,
+        { hash: hash },
+        {
+          width: "80%",
+          height: "100%",
+          clickToClose: false,
+          scrollable: true
+        }
       );
     }
   }

@@ -1,12 +1,10 @@
 <template>
   <div class="about">
-
     <div class="ui massive basic icon buttons" style="margin-top: 10%;">
       <button class="ui button"><i class="file icon"></i></button>
       <button class="ui button"><i class="save icon"></i></button>
       <button class="ui button"><i class="upload icon"></i></button>
       <button class="ui button"><i class="download icon"></i></button>
-
     </div>
     <button class="ui labeled icon button">
       <i class="pause icon"></i>
