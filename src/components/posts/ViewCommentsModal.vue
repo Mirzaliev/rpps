@@ -27,7 +27,7 @@
 
 <script>
 import Spinner from "vue-simple-spinner";
-import FileManager from "@/components/posts/FileManager.vue";
+import FileManager from "@/components/FileManager/FileManager.vue";
 
 export default {
   name: "ViewCommentsModal",

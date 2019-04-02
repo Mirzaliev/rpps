@@ -5,7 +5,6 @@
       class="post-content-link"
       @click="$modal.show('example-adaptive', { postId: thisPostId })"
     >
-      <eva-icon name="eye"></eva-icon>
     </a>
     <a href="#" class="post-content-link" @click="openDynamic">
       <i class="users icon"></i>
