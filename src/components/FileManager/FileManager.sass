@@ -1,0 +1,35 @@
+.file-manager
+  width: 100%
+  height: 100%
+  position: relative
+.fm
+  &-whiteboard
+    height: 100%
+    display: flex
+  &-dragHover
+    position: absolute
+    background-color: $blue
+    opacity: .35
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    outline: 5px dashed black
+    outline-offset: -20px
+    &-content
+      text-align: center
+      font-size: 1em
+      color: #ffffff
+      .icon
+        font-size: em(100)
+      h3
+        padding: 10px 0 0 0
+        margin: 0
+        font-size: em(30)
+        font-family: $default-font
+        font-weight: 400
+
+

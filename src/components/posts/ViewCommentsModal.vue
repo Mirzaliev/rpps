@@ -52,7 +52,6 @@ export default {
       .get(`http://www.somaku.com/posts/${this.postId}/comments`)
       .then(response => {
         this.comments = response.data;
-        console.log(response.data);
       })
       .catch(error => {
         console.log(error);
@@ -76,7 +75,6 @@ export default {
           width: "80%",
           height: "100%",
           clickToClose: false,
-          scrollable: true
         }
       );
     }

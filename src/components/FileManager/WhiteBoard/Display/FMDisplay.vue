@@ -34,6 +34,4 @@
   }
 </script>
 
-<style scoped>
-
-</style>
+<style lang="sass" src="./FMDisplay.sass"></style>
