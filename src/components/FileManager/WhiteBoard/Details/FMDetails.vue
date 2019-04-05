@@ -6,7 +6,9 @@
     <div class="details-wrapper">
       <div class="file-details fd">
         <!--fd = File Details-->
-        <div class="fd-image"></div>
+        <div class="fd-image-bg" style="background-image: url(https://st3.depositphotos.com/4468607/15532/v/1600/depositphotos_155321070-stock-illustration-seamless-loopable-abstract-chess-or.jpg)">
+          <div class="fd-image" style="background-image: url(https://lh5.googleusercontent.com/j_5WNUGDSD9DJ98jX8HOraqoJz4pxdpNlpsrucdJwmeU24a-xG4FI_HNxwrPW9mnA-EzsrsZv5WNgF1ymIiLiiVIhTaDS21oDPNE1jK6tTUUaqT4M3ugRnbN-s6ZW9xmrn_pxS4)"></div>
+        </div>
         <div class="fd-name-rename">
           <span class="fd-name-rename__title">Название файла</span>
           <!--<small class="fd-name-rename__error">Поле пустое</small>&ndash;&gt;-->
