@@ -10,6 +10,6 @@
   }
 </script>
 
-<style scoped>
+<style lang="sass" src="./FMLibrary.sass">
 
 </style>

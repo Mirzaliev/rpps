@@ -8,7 +8,7 @@
       :key="key"
     >
       <input type="text" :id="`input-file-${key}`" placeholder="Search..." />
-      <div @click="openFileManager('input-file-'+key)" class="ui button">
+      <div @click="openFileManager('input-file-' + key)" class="ui button">
         Загрузить {{ key }}
       </div>
     </div>
@@ -74,7 +74,7 @@ export default {
         {
           width: "80%",
           height: "100%",
-          clickToClose: false,
+          clickToClose: false
         }
       );
     }

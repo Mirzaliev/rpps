@@ -1,30 +1,54 @@
+$fm-display-title-color: rgba(17,17,17,.6)
+$fm-display-item-icon-color: #909090
+$fm-display-item-color: #0a0a0a
+$fm-display-item-hover-bg: rgba(0,0,0,.1)
+
+
 .fm
   &-whiteboard
     &-display
-      min-width: 200px
+      width: 200px
       border-right: 1px solid rgba(34,36,38,.15)
 
 .fm-whiteboard .fm-whiteboard-display.display
   .display__title
-    font-size: em(20)
-    font-family: $semi-bold
-    padding:
-      top: em(5)
-      bottom: em(5)
-      left: em(20)
-    border-bottom: 1px solid rgba(34,36,38,.15)
-
+    font-size: em(15)
+    font-family: $bold
+    color: $fm-display-title-color
+    padding: em(10) em(24)
   .display-filters
     display: flex
     flex-direction: column
     &__link
-      color: $fm-link-text-color
+      color: $fm-display-item-color
       cursor: pointer
       text-decoration: none
-      font-size: em(18)
-      padding-left: em(20)
-      padding-top: em(5)
-      padding-bottom: em(5)
-      &:hover, &.active
-        background-color: $fm-link-bg-hover
-        color: $fm-link-text-hover
+      box-sizing: border-box
+      outline: 0
+      padding: em(8) em(24)
+      display: flex
+      flex-direction: row
+      align-items: center
+      .icon
+        font-size: em(20)
+        color: $fm-display-item-icon-color
+        height: inherit
+      &:hover
+        background-color: $fm-display-item-hover-bg
+      &.active
+        background-color: $fm-display-item-hover-bg
+        .icon
+          color: $blue
+        .display-filters__title
+          font-family: $semi-bold
+
+    &__title
+      margin-left: em(10)
+      overflow: hidden
+      white-space: nowrap
+      text-overflow: ellipsis
+      font-size: em(15)
+      flex: 1
+      flex-basis: 0.000000001px
+      line-height: 2.1rem
+

@@ -4,3 +4,33 @@
     border-bottom: 1px solid rgba(34,36,38,.15)
     &-actions
       width: auto
+    &-notify
+      padding: 0
+      &_custom
+        position: relative
+        width: 100%
+        top: 0
+        left: 0
+        .notification-wrapper
+          margin-top: 10px
+          margin-bottom: 5px
+          &:last-child
+            margin-bottom: 0
+          .vue-notification
+            margin: 0
+            color: #000000
+            &.warn
+              background-color: $yellow
+              border-left-color: #e7ec00
+            &.error
+              color: white
+              background-color: $red
+              border-left-color: #c4001d
+            &.success
+              background-color: $green
+              border-left-color: #32cb00
+      &-bar
+        margin-top: 10px
+
+
+

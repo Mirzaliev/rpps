@@ -4,12 +4,10 @@
     <div class="fm-whiteboard">
       <f-m-display></f-m-display>
       <f-m-library></f-m-library>
+      <f-m-details></f-m-details>
     </div>
-    <div ref="dragHover" class="fm-dragHover" style="display: none;">
-      <div class="fm-dragHover-content">
-        <i class="upload icon"></i>
-        <h3>Перетащите файлы сюда</h3>
-      </div>
+    <div class="fm_is-dragover-message">
+      <h1>Перетащите в эту область ващи файлы</h1>
     </div>
   </div>
 </template>
@@ -18,6 +16,7 @@
 import FMToolbar from "@/components/FileManager/Toolbar/FMToolbar.vue";
 import FMDisplay from "@/components/FileManager/WhiteBoard/Display/FMDisplay.vue";
 import FMLibrary from "@/components/FileManager/WhiteBoard/Library/FMLibrary.vue";
+import FMDetails from "@/components/FileManager/WhiteBoard/Details/FMDetails.vue";
 
 export default {
   name: "FileManager",
@@ -29,7 +28,8 @@ export default {
   components: {
     FMToolbar,
     FMDisplay,
-    FMLibrary
+    FMLibrary,
+    FMDetails
   },
   data() {
     return {
@@ -72,7 +72,6 @@ export default {
         "FileReader" in window
       );
     },
-
     listenAllDragEvents() {
       [
         "drag",
@@ -117,13 +116,30 @@ export default {
     },
 
     addDragHover() {
-      this.$refs.fileform.addEventListener("dragover", function() {this.$refs.dragHover.style.display = "block";}.bind(this));
-      this.$refs.fileform.addEventListener("dragenter", function() {this.$refs.dragHover.style.display = "block";}.bind(this));
+      ["dragover", "dragenter"].forEach(
+        function(event) {
+          this.$refs.fileform.addEventListener(
+            event,
+            function() {
+              this.$refs.fileform.classList.add("fm_is-dragover");
+            }.bind(this),
+            false
+          );
+        }.bind(this)
+      );
     },
     removeDragHover() {
-      this.$refs.fileform.addEventListener("dragleave", function() {this.$refs.dragHover.style.display = "none";}.bind(this));
-      this.$refs.fileform.addEventListener("dragend", function() {this.$refs.dragHover.style.display = "none";}.bind(this));
-      this.$refs.fileform.addEventListener("drop", function() {this.$refs.dragHover.style.display = "none";}.bind(this));
+      ["dragleave", "dragend", "drop"].forEach(
+        function(event) {
+          this.$refs.fileform.addEventListener(
+            event,
+            function() {
+              this.$refs.fileform.classList.remove("fm_is-dragover");
+            }.bind(this),
+            false
+          );
+        }.bind(this)
+      );
     }
   }
 };

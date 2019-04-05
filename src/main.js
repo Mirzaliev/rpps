@@ -5,6 +5,7 @@ import router from "./router";
 import store from "./store";
 //import EvaIcons from "vue-eva-icons";
 import VueModal from "vue-js-modal";
+import Notifications from "vue-notification";
 
 //Vue.use(EvaIcons);
 Vue.use(VueModal, {
@@ -12,6 +13,7 @@ Vue.use(VueModal, {
   dynamic: true,
   injectModalsContainer: true
 });
+Vue.use(Notifications);
 
 Vue.config.productionTip = false;
 
