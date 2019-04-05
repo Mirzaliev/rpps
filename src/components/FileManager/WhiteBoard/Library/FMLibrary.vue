@@ -10,6 +10,4 @@
   }
 </script>
 
-<style lang="sass" src="./FMLibrary.sass">
-
-</style>
+<style lang="sass" src="./FMLibrary.sass"></style>

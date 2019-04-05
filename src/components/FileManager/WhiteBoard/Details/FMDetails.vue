@@ -7,7 +7,7 @@
       <div class="file-details fd">
         <!--fd = File Details-->
         <div class="fd-image-bg" style="background-image: url(https://st3.depositphotos.com/4468607/15532/v/1600/depositphotos_155321070-stock-illustration-seamless-loopable-abstract-chess-or.jpg)">
-          <div class="fd-image" style="background-image: url(https://lh5.googleusercontent.com/j_5WNUGDSD9DJ98jX8HOraqoJz4pxdpNlpsrucdJwmeU24a-xG4FI_HNxwrPW9mnA-EzsrsZv5WNgF1ymIiLiiVIhTaDS21oDPNE1jK6tTUUaqT4M3ugRnbN-s6ZW9xmrn_pxS4)"></div>
+          <a class="fd-image" @click="example()" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROKKzFKSFh4NcdQsAQv_DCl2FSQtbgOzRqX5psJzeix-4Y0dAQig)"></a>
         </div>
         <div class="fd-name-rename">
           <span class="fd-name-rename__title">Название файла</span>
@@ -22,7 +22,7 @@
           </div>
           <div class="fd-info-item">
             <span href="#" class="fd-info-item__title">Размер:</span>
-            <small class="fd-info-item__value">3 КБ</small>
+            <span class="fd-info-item__value">3 КБ</span>
           </div>
           <div class="fd-info-item">
             <span class="fd-info-item__title">Путь:</span>
@@ -42,7 +42,12 @@
 
 <script>
 export default {
-  name: "FMDetails"
+  name: "FMDetails",
+  methods: {
+    example() {
+      console.log('sdfsdfd');
+    }
+  },
 };
 </script>
 
