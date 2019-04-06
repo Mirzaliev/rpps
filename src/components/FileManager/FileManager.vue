@@ -6,9 +6,9 @@
       <f-m-library></f-m-library>
       <f-m-details></f-m-details>
     </div>
-    <div class="fm_is-dragover-message">
-      <h1>Перетащите в эту область ващи файлы</h1>
-    </div>
+    <!--<div class="fm_is-dragover-message">-->
+      <!--<h1>Перетащите в эту область ващи файлы</h1>-->
+    <!--</div>-->
   </div>
 </template>
 
